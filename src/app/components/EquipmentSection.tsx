@@ -256,21 +256,6 @@ export function EquipmentSection() {
               })}
             </Swiper>
           </div>
-
-          {/* Стрелки между компетенциями - видны только на десктопе */}
-          <div className="hidden lg:flex absolute top-1/2 left-0 right-0 -translate-y-1/2 pointer-events-none z-10">
-            {Array.from({ length: competencies.length - 1 }).map((_, index) => (
-              <div
-                key={index}
-                className="flex-1 flex justify-center"
-                style={{
-                  marginLeft: index === 0 ? 'calc((100% - 4*280px) / 5)' : '0', // Учитываем отступы между слайдами
-                }}
-              >
-                <ArrowRight className="text-[#50626C] opacity-70" size={24} />
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
